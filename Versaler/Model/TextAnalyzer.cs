@@ -10,11 +10,8 @@ namespace Versaler.Model
     {
         public static int GetNumberOfCapitals(this string text)
         {
-            int input;
-
-            Regex _reg = new Regex("[A-ZÅÄÖ]");
-            input = _reg.Matches(text).Count;
-            return input;
+            Regex reg = new Regex("[A-ZÅÄÖ]");
+            return reg.Matches(text).Count;
         }
 
     }
