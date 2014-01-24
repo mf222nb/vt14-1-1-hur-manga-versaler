@@ -15,7 +15,7 @@ namespace Versaler
             ClearButton.Visible = false;
         }
 
-        protected void Button_Click(object sender, EventArgs e)
+        protected void SubmitButton_Click(object sender, EventArgs e)
         {
             ResponseText.Text = TextBox.Text.GetNumberOfCapitals().ToString();
 
@@ -24,13 +24,13 @@ namespace Versaler
             ClearButton.Visible = true;
         }
 
-        protected void Clear_Click(object sender, EventArgs e)
+        protected void ClearButton_Click(object sender, EventArgs e)
         {
             TextBox.Text = String.Empty;
             ResponseText.Text = String.Empty;
             TextBox.Enabled = true;
-            ClearButton.Visible = false;
             SubmitButton.Visible = true;
+            ClearButton.Visible = false;
         }
     }
 }
